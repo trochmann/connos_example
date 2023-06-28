@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+    <Deterministic>false</Deterministic>
+    <AssemblyVersion>1.0.*</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Configurations>Debug;Release;EasyTest</Configurations>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Model.DesignedDiffs.xafml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.ExpressApp" Version="22.1.9" />
+    <PackageReference Include="DevExpress.ExpressApp.CloneObject.Xpo" Version="22.1.9" />
+    <PackageReference Include="DevExpress.ExpressApp.CodeAnalysis" Version="22.1.9" />
+    <PackageReference Include="DevExpress.ExpressApp.de" Version="22.1.9" />
+    <PackageReference Include="DevExpress.ExpressApp.Objects" Version="22.1.9" />
+    <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="22.1.9" />
+    <PackageReference Include="DevExpress.Persistent.Base" Version="22.1.9" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl.Xpo" Version="22.1.9" />
+    <PackageReference Include="System.Data.Odbc" Version="7.0.0" />
+    <PackageReference Include="System.Data.OleDb" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.ExpressApp.Win.v22.1">
+      <HintPath>..\..\..\Program Files\DevExpress 22.1\Components\Offline Packages\devexpress.expressapp.win\22.1.9\lib\net6.0-windows\DevExpress.ExpressApp.Win.v22.1.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

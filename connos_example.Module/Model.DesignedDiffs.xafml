@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="connos_example">
+  <ActionDesign>
+    <Actions>
+      <Action Id="SetApartmentParent" ImageName="BO_Department" PaintStyle="CaptionAndImage" QuickAccess="True" />
+    </Actions>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="connos_example.Module.BusinessObjects.Data.Apartment" IsCloneable="True" />
+  </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Reinert Immobilienverwaltung GmbH">
+        <Items>
+          <Item Id="Client_ListView" Index="1" />
+          <Item Id="RealEstateObject_ListView" Index="2" />
+          <Item Id="Apartment_ListView" Index="3" />
+          <Item Id="Rent_ListView" Index="4" />
+          <Item Id="Renter_ListView" Index="5" />
+          <Item Id="Repair_ListView" Index="6" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="22.1.9.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="22.1.9.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="Apartment_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="24.212034383954155">
+            <LayoutGroup Id="Apartment" RelativeSize="100" Index="0">
+              <LayoutGroup Id="Apartment_col1" RelativeSize="52.05843293492696">
+                <LayoutItem Id="Description" RelativeSize="27.2" />
+                <LayoutItem Id="CountOfKeys" RelativeSize="20.8" Index="1" />
+                <LayoutItem Id="CountOfRooms" RelativeSize="20.8" Index="2" />
+              </LayoutGroup>
+              <LayoutGroup Id="Apartment_col2" RelativeSize="47.94156706507304">
+                <LayoutItem Id="SquareMeters" RelativeSize="27.2" />
+                <LayoutItem Id="Rented" RelativeSize="20.8" />
+                <LayoutItem Id="LastModernization" RelativeSize="52" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="75.78796561604585">
+            <LayoutGroup Id="Renters" RelativeSize="100">
+              <LayoutItem Id="Renters" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Repairs" RelativeSize="100">
+              <LayoutItem Id="Repairs" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Rent" RelativeSize="100">
+              <LayoutItem Id="Rent" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
